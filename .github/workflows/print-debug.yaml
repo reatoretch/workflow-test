@@ -1,0 +1,14 @@
+name: print GITHUB_OUTPUT(For dispatch)
+
+on: workflow_dispatch
+
+jobs:
+  print-something:
+    defaults:
+      run:
+        shell: bash
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print GitHUB Output
+        run: |
+          echo $GITHUB_OUTPUT
